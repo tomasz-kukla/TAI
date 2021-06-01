@@ -14,6 +14,7 @@ export const BrandAdd = () => {
 
 
     const handleAdd = () => {
+        console.log(data)
 
         axios.post("http://127.0.0.1:8000/api/Brands/", {
             name: data.name,
@@ -38,9 +39,9 @@ export const BrandAdd = () => {
     return (
         <FormContainer>
             <h1>Create Brand</h1>
-            <Form onSubmit={event => event.preventDefault()}>
+            <Form onSubmit={event => event.preventDefault()} className="">
                 <Form.Row>
-                    <Form.Group as={Col} >
+                    <Form.Group as={Col}>
                         <Label>Name</Label>
                         <Field
                             onChange={onChange}
@@ -84,7 +85,7 @@ export const BrandAdd = () => {
                     </div>
                 </Form.Row>
             </Form>
-        </FormContainer>
+        </FormContainer >
 
 
     );
@@ -92,5 +93,9 @@ export const BrandAdd = () => {
 
 const FormContainer = styled(Container)`
     max-width:600px;
-
+    height: 100vh;
+    margin-top: 30px !important;
+    align-items: center;
+    text-align: center;
 `;
+
