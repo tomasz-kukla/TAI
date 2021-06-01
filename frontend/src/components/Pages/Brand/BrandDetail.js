@@ -10,7 +10,7 @@ import { Label, Field } from '../../utils/Theme';
 import { Container, Col, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
-export const BrandDetail = ({ brand }) => {
+export const BrandDetail = () => {
     const { id } = useParams();
 
     const [brands, setBrands] = useState([]);
@@ -21,12 +21,17 @@ export const BrandDetail = ({ brand }) => {
     }, []);
 
     const handleEdit = () => {
-        console.log("Edit")
+        axios.put("http://127.0.0.1:8000/api/Brands/" + id + "/")
+            .then(res => console.log("Successfully modified."))
+            .catch(console.log)
     }
 
     const handleDelete = () => {
-        console.log("Delete")
-    }
+        axios.delete("http://127.0.0.1:8000/api/Brands/" + id + "/")
+            .then(res => console.log("Successfully deleted."))
+            .catch(console.log)
+
+    };
 
 
     return (
@@ -74,7 +79,7 @@ export const BrandDetail = ({ brand }) => {
                 <Form.Row>
                     <div className="container ">
                         <Button className="btn btn-warning" onClick={handleEdit}>Edit</Button>
-                        <Button className="btn btn-danger" onClick={handleDelete}>Delete</Button>
+                        <Button className="btn btn-danger" onClick={handleDelete} href="/Brand">Delete</Button>
                     </div>
                 </Form.Row>
             </Form>

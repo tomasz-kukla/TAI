@@ -11,6 +11,7 @@ export const BrandPage = (props) => {
     const [brands, setBrands] = useState([]);
 
     useEffect(() => {
+        
         axios.get("http://127.0.0.1:8000/api/Brands/")
             .then(res => {
                 setBrands(res.data)
@@ -26,7 +27,8 @@ export const BrandPage = (props) => {
     return (
         <div className="container text-center">
             <h2>Brands</h2>
-            <a class="btn btn-secondary float-right" onClick={handleAdd}>Create Brand</a>
+            <a class="btn btn-secondary float-right"
+                href={'/BrandAdd/'}>Create Brand</a>
 
             {brands.map((brand) => (
                 <Div className="card text-center" styles={`width: 20rem`}>
@@ -35,12 +37,15 @@ export const BrandPage = (props) => {
                             {brand.name}</h5>
                     </div>
 
-                    <div className="card-body">
-                        <t className="card-text" key={brand.id}>
-                            Established: {brand.established}</t>
+                    <div className="card-body" key={brand.id}>
+                        <t className="card-text" >
+                            <b>Category:</b> {brand.category}</t>
+                        <br />
+                        <t className="card-text" >
+                            <b>Established: </b>{brand.established}</t>
                         <br />
                         <t className="card-text" key={brand.id}>
-                            Country: {brand.origin}</t>
+                            <b>Country:</b> {brand.origin}</t>
                     </div>
 
                     <div className="card-footer">
