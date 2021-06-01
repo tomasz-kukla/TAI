@@ -1,17 +1,28 @@
+import styled from 'styled-components'
+
 import React, { Component } from "react";
-import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import '../../utils/styles.css'
 
+import { Navbar, Nav, Form, Button, FormControl, Container } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export const NavigationBar = () => {
+    
     return (
-        <nav className="topnav">
-            <a className="nav1" href="/">Home</a>
-            <a className="nav2" href="/Brand">Brand</a>
-            <a className="nav3" href="/Shop">Shop</a>
-        </nav>
+        <Navbar bg="dark justify-content-center" variant="dark">
+            <Navbar.Brand href="/">TAI</Navbar.Brand>
+            <Nav className="mr-auto">
+                <Nav.Link href="/Brand">Brand</Nav.Link>
+                <Nav.Link href="/Shop">Shop</Nav.Link>
+            </Nav>
+
+        </Navbar>
     );
 };
 
+
+const MyButton = styled(Button)`
+
+`
