@@ -12,11 +12,12 @@ export const Theme = {
 }
 
 export const Label = styled.span`
-    font-weight:600;
+    font-weight:800;
+    font-size: 22px;
     color: ${props => Theme.textInfo};
     text-transform:lowercase;
-    opacity:0.9;
     font-variant:small-caps;
+    
 `;
 
 export const Field = styled(Form.Control)`
@@ -26,4 +27,5 @@ export const Field = styled(Form.Control)`
     text-align:end;
     border: none;
     box-shadow: 2px 2px 2px ${Theme.shadow};
+    margin-bottom: 10px !important;
 `;

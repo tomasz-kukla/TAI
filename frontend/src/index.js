@@ -11,6 +11,8 @@ import styled from "styled-components";
 
 import { Theme } from './components/utils/Theme'
 import { ShopPage } from "./components/Pages/Shop/ShopPage";
+import { ShopDetail } from "./components/Pages/Shop/ShopDetail";
+import { ShopAdd } from "./components/Pages/Shop/ShopAdd";
 import { BrandPage } from "./components/Pages/Brand/BrandPage";
 import { BrandDetail } from "./components/Pages/Brand/BrandDetail";
 import { BrandAdd } from "./components/Pages/Brand/BrandAdd";
@@ -37,6 +39,8 @@ ReactDOM.render(
         <Route path="/BrandAdd" component={BrandAdd} />
         <Route path="/Brands/:id" component={BrandDetail} />
         <Route path="/Shop" component={ShopPage} />
+        <Route path="/ShopAdd" component={ShopAdd} />
+        <Route path="/Shops/:id" component={ShopDetail} />
       </Switch>
     </Root>
   </Router>,
