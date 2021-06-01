@@ -1,15 +1,14 @@
 import styled from 'styled-components'
 
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import '../../utils/styles.css'
 
-import { Navbar, Nav, Form, Button, FormControl, Container } from 'react-bootstrap'
+import { Navbar, Nav, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export const NavigationBar = () => {
-    
+
     return (
         <Navbar bg="dark justify-content-center" variant="dark">
             <Navbar.Brand href="/">TAI</Navbar.Brand>
