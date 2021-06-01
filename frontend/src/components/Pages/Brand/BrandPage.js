@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Container, Button } from 'react-bootstrap';
 
 import styled from 'styled-components';
 
@@ -11,7 +10,7 @@ export const BrandPage = (props) => {
     const [brands, setBrands] = useState([]);
 
     useEffect(() => {
-        
+
         axios.get("http://127.0.0.1:8000/api/Brands/")
             .then(res => {
                 setBrands(res.data)
@@ -19,19 +18,14 @@ export const BrandPage = (props) => {
             .catch(console.log)
     }, []);
 
-    const handleAdd = () => {
-        console.log("Add")
-    }
-
-
     return (
-        <div className="container text-center">
+        <Sect className="container text-center">
             <h2>Brands</h2>
             <a class="btn btn-secondary float-right"
                 href={'/BrandAdd/'}>Create Brand</a>
 
             {brands.map((brand) => (
-                <Div className="card text-center" styles={`width: 20rem`}>
+                <Div className="card text-center border-danger mb-3" styles={`width: 20rem`}>
                     <div className="card-header">
                         <h5 className="card-title" key={brand.id}>
                             {brand.name}</h5>
@@ -61,12 +55,22 @@ export const BrandPage = (props) => {
 
             ))
             }
-        </div >
+        </Sect >
     );
 
 };
 
 const Div = styled.div`
-    margin-bottom: 30px;
+    margin-top: 30px;
+    
+`
+const Sect = styled.div`
+    margin: auto;
+    height: 100vh;
+    
+`
+const Cols = styled.div`
+    align-items: center;
+    text-align: center;
     
 `
