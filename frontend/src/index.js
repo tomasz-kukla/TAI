@@ -13,6 +13,7 @@ import { Theme } from './components/utils/Theme'
 import { ShopPage } from "./components/Pages/Shop/ShopPage";
 import { BrandPage } from "./components/Pages/Brand/BrandPage";
 import { BrandDetail } from "./components/Pages/Brand/BrandDetail";
+import { BrandAdd } from "./components/Pages/Brand/BrandAdd";
 import { NavigationBar } from "./components/Pages/Navbar/NavigationBar";
 import { HomePage } from "./components/Pages/Home/HomePage";
 
@@ -33,6 +34,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/Brand" component={BrandPage} />
+        <Route path="/BrandAdd" component={BrandAdd} />
         <Route path="/Brands/:id" component={BrandDetail} />
         <Route path="/Shop" component={ShopPage} />
       </Switch>
