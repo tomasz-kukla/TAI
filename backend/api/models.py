@@ -17,7 +17,7 @@ class Shop(models.Model):
 
     city = models.CharField(max_length=30)
     mall_name = models.CharField(max_length=40)
-    customers = models.IntegerField()
+    customers = models.IntegerField(default=1)
     opened = models.DateField()
 
     def __str__(self) -> str:
