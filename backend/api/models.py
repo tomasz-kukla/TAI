@@ -22,3 +22,7 @@ class Shop(models.Model):
 
     def __str__(self) -> str:
         return f'{self.city} - {self.mall_name} - {self.opened}'
+
+    @property
+    def brand_name(self) -> str:
+        return self.brand.name
