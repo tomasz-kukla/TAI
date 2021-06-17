@@ -86,7 +86,7 @@ export const ShopAdd = () => {
                 </Form.Row>
                 <Form.Row>
                     <div className="container ">
-                        <Button className="btn btn-warning" type="submit">Create</Button>
+                        <Button className="btn btn-warning" type="submit" href="/Shop">Create</Button>
                     </div>
                 </Form.Row>
             </Form>

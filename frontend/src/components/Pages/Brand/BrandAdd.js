@@ -26,6 +26,7 @@ export const BrandAdd = () => {
                 console.log(res.data)
             })
             .catch(console.log)
+
     }
 
     const onChange = (event) => {
@@ -81,7 +82,7 @@ export const BrandAdd = () => {
                 </Form.Row>
                 <Form.Row>
                     <div className="container ">
-                        <Button className="btn btn-warning" onClick={handleAdd}>Create</Button>
+                        <Button className="btn btn-warning" href="/Brand" onClick={handleAdd}>Create</Button>
                     </div>
                 </Form.Row>
             </Form>

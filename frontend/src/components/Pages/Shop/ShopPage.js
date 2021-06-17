@@ -39,8 +39,8 @@ export const ShopPage = (props) => {
                         <t className="card-text" >
                             <b>Registered customers:</b> {shop.customers}</t>
                         <br />
-                        <t className="card-text" key={shop.id}>
-                            <b>Brand:</b> {shop.brand}</t>
+                        <h4 className="card-text" key={shop.id}>
+                            <b> {shop.brand_name}</b></h4>
                     </div>
 
                     <div className="card-footer">

@@ -51,7 +51,7 @@ export const HomePage = (props) => {
                     <div className="card text-center border-secondary mb-3">
                         <div className="card-body" key={shop.id}>
                             <h5 className="card-text ">
-                                {shop.city} - {shop.mall_name}
+                                {shop.brand_name} - {shop.city} - {shop.mall_name}
                             </h5>
                         </div>
 
